@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <%= cl_image_tag("fx0rwnqk36uqdtdgsp5w",
+      width: 400, height: 300, crop: :fill) %>
+  <%= cl_image_tag("fg5syuclsvaawnerduot",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <p>
+    <strong>Body:</strong>
+    <%= @article.body %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', root_path %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', root_path %>
+</div>
